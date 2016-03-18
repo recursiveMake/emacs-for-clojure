@@ -1,4 +1,4 @@
-# this is a Clojure-friendly emacs config
+# this is a Clojure-friendly emacs config (requires emacs 24.4+)
 
 If you're new to emacs, check out
 [this introductory tutorial](http://www.braveclojure.com/basic-emacs/)!
