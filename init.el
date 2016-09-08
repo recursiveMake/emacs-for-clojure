@@ -66,7 +66,12 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; markdown
+    use-package
+    markdown-mode
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -130,3 +135,9 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+;; Git configuration
+(load "git.el")
+
+;; Markdown configuration
+(load "markdown.el")
