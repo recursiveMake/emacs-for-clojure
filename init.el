@@ -71,6 +71,12 @@
     ;; markdown
     use-package
     markdown-mode
+
+    ;; go
+    go-mode
+    exec-path-from-shell
+    auto-complete
+    go-autocomplete
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -141,3 +147,6 @@
 
 ;; Markdown configuration
 (load "markdown.el")
+
+;; Go configuration
+(load "go.el")
