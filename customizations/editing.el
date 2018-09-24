@@ -83,3 +83,6 @@
             (local-set-key (kbd "C-c <up>") 'hs-hide-all)
             (local-set-key (kbd "C-c <down>") 'hs-show-all)
             (hs-minor-mode t)))
+
+; Newlines
+(setq require-final-newline t)
