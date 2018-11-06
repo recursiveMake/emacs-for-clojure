@@ -77,6 +77,9 @@
     exec-path-from-shell
     auto-complete
     go-autocomplete
+
+    ;; groovy
+    groovy-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -153,6 +156,8 @@
 
 ;; Load sane default
 (setq require-final-newline t)
+(require 'cl)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -161,7 +166,8 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (elpy use-package tagedit smex rainbow-delimiters projectile paredit markdown-mode magit ido-ubiquitous go-mode go-autocomplete exec-path-from-shell clojure-mode-extra-font-locking cider better-defaults))))
+    (dockerfile-mode ein salt-mode virtualenvwrapper use-package tagedit smex rainbow-delimiters projectile paredit markdown-mode magit ido-ubiquitous groovy-mode go-mode go-autocomplete exec-path-from-shell ess elpy clojure-mode-extra-font-locking cider better-defaults))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
