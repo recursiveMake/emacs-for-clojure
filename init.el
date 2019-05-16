@@ -177,7 +177,32 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (py-autopep8 dockerfile-mode ein salt-mode virtualenvwrapper use-package tagedit smex rainbow-delimiters projectile paredit markdown-mode magit ido-ubiquitous groovy-mode go-mode go-autocomplete exec-path-from-shell ess elpy clojure-mode-extra-font-locking cider better-defaults org))))
+    (
+     py-autopep8
+     dockerfile-mode
+     ein
+     salt-mode
+     virtualenvwrapper
+     use-package
+     tagedit
+     smex
+     rainbow-delimiters
+     projectile
+     paredit
+     markdown-mode
+     magit
+     ido-ubiquitous
+     groovy-mode
+     go-mode
+     go-autocomplete
+     exec-path-from-shell
+     ess
+     elpy
+     clojure-mode-extra-font-locking
+     cider
+     better-defaults
+     org
+     ))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
