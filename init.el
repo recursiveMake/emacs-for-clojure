@@ -178,30 +178,30 @@
  '(package-selected-packages
    (quote
     (
-     py-autopep8
+     better-defaults
+     cider
+     clojure-mode-extra-font-locking
      dockerfile-mode
      ein
-     salt-mode
-     virtualenvwrapper
-     use-package
-     tagedit
-     smex
-     rainbow-delimiters
-     projectile
-     paredit
-     markdown-mode
-     magit
-     ido-ubiquitous
-     groovy-mode
-     go-mode
-     go-autocomplete
-     exec-path-from-shell
-     ess
      elpy
-     clojure-mode-extra-font-locking
-     cider
-     better-defaults
+     ess
+     exec-path-from-shell
+     go-autocomplete
+     go-mode
+     groovy-mode
+     ido-ubiquitous
+     magit
+     markdown-mode
      org
+     paredit
+     projectile
+     py-autopep8
+     rainbow-delimiters
+     salt-mode
+     smex
+     tagedit
+     use-package
+     virtualenvwrapper
      ))))
 
 (custom-set-faces
