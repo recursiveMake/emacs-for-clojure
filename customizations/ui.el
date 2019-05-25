@@ -69,3 +69,9 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; Doom-modeline
+;; (all-the-icons-install-fonts)
+(doom-modeline-mode 1)
+;; Whether display minor modes in mode-line or not.
+(setq doom-modeline-minor-modes t)

@@ -91,6 +91,10 @@
 
     ;; org
     org
+
+    ;; Doom mode-line
+    all-the-icons
+    doom-modeline
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -178,10 +182,12 @@
  '(package-selected-packages
    (quote
     (
+     all-the-icons
      better-defaults
      cider
      clojure-mode-extra-font-locking
      dockerfile-mode
+     doom-modeline
      ein
      elpy
      ess
