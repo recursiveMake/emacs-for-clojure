@@ -75,6 +75,7 @@
 
     ;; git integration
     magit
+    diff-hl
 
     ;; markdown
     use-package
@@ -186,6 +187,7 @@
      better-defaults
      cider
      clojure-mode-extra-font-locking
+     diff-hl
      dockerfile-mode
      doom-modeline
      ein
