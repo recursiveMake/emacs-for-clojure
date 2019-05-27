@@ -98,6 +98,10 @@
     ;; Doom mode-line
     all-the-icons
     doom-modeline
+
+    ;; pep
+    py-autopep8
+    flycheck
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -196,6 +200,7 @@
      elpy
      ess
      exec-path-from-shell
+     flycheck
      go-autocomplete
      go-mode
      groovy-mode
