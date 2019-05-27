@@ -86,3 +86,8 @@
 
 ; Newlines
 (setq require-final-newline t)
+
+; Flycheck
+;; (global-flycheck-mode)
+;; (add-hook 'prog-mode-hook 'flycheck-mode)
+(add-hook 'python-mode-hook 'flycheck-mode)
