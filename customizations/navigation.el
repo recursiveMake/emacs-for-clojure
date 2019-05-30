@@ -27,6 +27,7 @@
 ;; you've typed in
 ;; http://www.emacswiki.org/emacs/InteractivelyDoThings
 (ido-mode t)
+(ido-everywhere 1)
 
 ;; This allows partial matches, e.g. "tl" will match "Tyrion Lannister"
 (setq ido-enable-flex-matching t)
@@ -45,6 +46,26 @@
 ;; This enables ido in all contexts where it could be useful, not just
 ;; for selecting buffer and file names
 (ido-ubiquitous-mode 1)
+
+;; For any case where ido cannot be used, there is another older mode called
+;; icomplete-mode that integrates with standard emacs completion and adds
+;; some ido-like behavior.
+(icomplete-mode 1)
+
+;; some packages already provide their own interfaces to ido, so
+;; ido-completing-read+ specifically avoids interfering with these. If
+;; you use any of the following packages, you need to enable ido for each
+;; of them separately.
+(setq magit-completing-read-function 'magit-ido-completing-read)
+;; (setq gnus-completing-read-function 'gnus-ido-completing-read)
+;; (setq ess-use-ido t)
+
+;; Some commands, such as describe-face, use completing-read-multiple
+;; instead of completing-read. You can get ido completion for these
+;; commands with crm-custom-mode, which replaces completing-read-multiple
+;; with repeated calls to completing-read, which would then use ido
+;; thanks to ido-ubiquitous-mode.
+(crm-custom-mode 1)
 
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
