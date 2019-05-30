@@ -90,4 +90,6 @@
 ; Flycheck
 ;; (global-flycheck-mode)
 ;; (add-hook 'prog-mode-hook 'flycheck-mode)
-(add-hook 'python-mode-hook 'flycheck-mode)
+(add-hook 'prog-mode-hook #'lsp)
+(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+(add-hook 'prog-mode-hook 'flycheck-mode)

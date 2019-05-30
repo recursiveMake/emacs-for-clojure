@@ -88,6 +88,10 @@
     ;; pep
     py-autopep8
     flycheck
+
+    ;; lsp-mode
+    lsp-mode
+    lsp-ui
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -190,6 +194,8 @@
      go-autocomplete
      go-mode
      groovy-mode
+     lsp-mode
+     lsp-ui
      magit
      markdown-mode
      org
