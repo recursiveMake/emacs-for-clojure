@@ -93,3 +93,5 @@
 (add-hook 'prog-mode-hook #'lsp)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 (add-hook 'prog-mode-hook 'flycheck-mode)
+(add-hook 'salt-mode-hook
+          (lambda () (flyspell-mode 1)))
