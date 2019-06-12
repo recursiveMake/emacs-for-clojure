@@ -76,3 +76,5 @@
 ;; Whether display minor modes in mode-line or not.
 ;; (setq doom-modeline-minor-modes t)
 
+;; Reduce ridiculous font-size
+(set-face-attribute 'default nil :height 130)
