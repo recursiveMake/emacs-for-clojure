@@ -92,6 +92,7 @@
     ;; lsp-mode
     lsp-mode
     lsp-ui
+    yasnippet
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -208,6 +209,7 @@
      tagedit
      use-package
      virtualenvwrapper
+     yasnippet
      ))))
 
 (custom-set-faces
