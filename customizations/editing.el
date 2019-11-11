@@ -95,3 +95,7 @@
 (add-hook 'prog-mode-hook 'flycheck-mode)
 (add-hook 'salt-mode-hook
           (lambda () (flyspell-mode 1)))
+
+;; snippets
+(yas-global-mode 1)
+
