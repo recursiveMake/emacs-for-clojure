@@ -53,6 +53,7 @@
     smex
 
     ;; project navigation
+    ag
     projectile
 
     ;; colorful parenthesis matching
