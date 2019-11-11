@@ -87,6 +87,7 @@
     doom-modeline
 
     ;; pep
+    elpy
     py-autopep8
     flycheck
 
@@ -161,6 +162,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-python.el")
 
 ;; Git configuration
 (load "git.el")
