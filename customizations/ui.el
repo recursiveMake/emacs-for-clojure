@@ -12,6 +12,9 @@
 (set-face-attribute 'line-number nil :foreground "#444444")
 (set-face-attribute 'line-number-current-line nil :foreground "#666666" :weight 'ultra-bold)
 
+;; Add column number
+(column-number-mode 1)
+
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
 (when (fboundp 'tool-bar-mode)
