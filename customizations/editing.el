@@ -99,3 +99,5 @@
 ;; snippets
 (yas-global-mode 1)
 
+;; direnv
+(direnv-mode)

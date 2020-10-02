@@ -47,6 +47,7 @@
 
     ;; project navigation
     ag
+    direnv
     projectile
 
     ;; colorful parenthesis matching

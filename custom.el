@@ -8,6 +8,7 @@
  '(package-selected-packages
    (quote
     (
+     direnv
      all-the-icons
      better-defaults
      cider
