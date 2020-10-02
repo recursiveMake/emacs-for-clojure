@@ -11,6 +11,8 @@
  '(package-selected-packages
    (quote
     (
+     ag
+     yasnippet-snippets
      direnv
      all-the-icons
      better-defaults
