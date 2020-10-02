@@ -7,7 +7,42 @@
  '(lsp-auto-guess-root t)
  '(package-selected-packages
    (quote
-    (all-the-icons better-defaults cider diff-hl dockerfile-mode doom-modeline ein elpy ess exec-path-from-shell flycheck go-autocomplete go-mode groovy-mode lsp-mode lsp-ui markdown-mode org paredit projectile py-autopep8 rainbow-delimiters smex tagedit use-package virtualenvwrapper yasnippet))))
+    (
+     all-the-icons
+     better-defaults
+     cider
+     clojure-mode-extra-font-locking
+     diff-hl
+     dockerfile-mode
+     doom-modeline
+     ein
+     elpy
+     ess
+     exec-path-from-shell
+     flycheck
+     go-autocomplete
+     go-mode
+     groovy-mode
+     lsp-mode
+     lsp-ui
+     magit
+     markdown-mode
+     org
+     paredit
+     projectile
+     py-autopep8
+     rainbow-delimiters
+     salt-mode
+     smex
+     tagedit
+     use-package
+     virtualenvwrapper
+     yasnippet
+     )))
+ '(safe-local-variable-values
+   (quote
+    ((my-black-fix-code-on-save . t)
+     (my-black-fix-code . t)))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
