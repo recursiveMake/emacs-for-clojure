@@ -78,3 +78,6 @@
 
 ;; Reduce ridiculous font-size
 (set-face-attribute 'default nil :height 120)
+
+;; Transparent windows ftw
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
