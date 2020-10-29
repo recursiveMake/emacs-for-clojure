@@ -169,7 +169,6 @@
 
 ;; Load sane default
 (setq require-final-newline t)
-(require 'cl)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
