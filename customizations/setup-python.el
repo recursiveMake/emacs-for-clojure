@@ -1,7 +1,13 @@
 (use-package elpy
   :ensure t
   :init
-  (elpy-enable))
+  (elpy-enable)
+  :config
+  (progn
+    (define-key elpy-mode-map (kbd "<M-right>") nil)
+    (define-key elpy-mode-map (kbd "<M-left>") nil)
+    (define-key elpy-mode-map (kbd "<S-right>") 'elpy-nav-indent-shift-right)
+    (define-key elpy-mode-map (kbd "<S-left>") 'elpy-nav-indent-shift-left)))
 
 (use-package flycheck
   :ensure t
