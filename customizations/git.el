@@ -12,3 +12,5 @@
     (mapc #'kill-buffer buffers)))
 
 (bind-key "q" #'mu-magit-kill-buffers magit-status-mode-map)
+
+(add-to-list 'tramp-remote-path 'tramp-own-remote-path)
