@@ -6,5 +6,5 @@
 (when (string= system-type "darwin")       
   (setq dired-use-ls-dired nil))
 
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin/"))
-(setq exec-path (append exec-path '("/usr/local/bin/")))
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin/:~/.local/bin/"))
+(setq exec-path (append exec-path '("/usr/local/bin/:~/.local/bin/")))
