@@ -166,6 +166,7 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-python.el")
+(load "setup-gpg.el")
 
 ;; Misc language modes
 (load "setup-misc-languages.el")
