@@ -157,6 +157,7 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-python.el")
+(load "setup-gpg.el")
 
 ;; Git configuration
 (load "git.el")
