@@ -14,6 +14,11 @@
   :init
   (global-flycheck-mode t))
 
+;; Use Python 3
+(setq elpy-rpc-python-command "python3")
+
+(setq python-shell-interpreter "python3")
+
 (defvar my-black-fix-code-on-save nil
   "If true, code will be blackened on save")
 
