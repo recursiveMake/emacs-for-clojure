@@ -185,3 +185,5 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
