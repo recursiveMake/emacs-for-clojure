@@ -39,6 +39,12 @@
     ;; Enhances M-x with ranked command history
     amx
 
+    ;; modern minibuffer completion
+    vertico
+    orderless
+    marginalia
+    consult
+
     ;; project navigation
     ag
     direnv

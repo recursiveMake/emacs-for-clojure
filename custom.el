@@ -8,7 +8,7 @@
  '(elpy-rpc-python-command "python3")
  '(lsp-auto-guess-root t)
  '(package-selected-packages
-   '(ag direnv all-the-icons cider clojure-mode-extra-font-locking diff-hl doom-modeline elpy exec-path-from-shell flycheck go-mode groovy-mode lsp-mode lsp-ui magit markdown-mode org paredit projectile py-autopep8 rainbow-delimiters tagedit use-package yasnippet))
+   '(ag amx consult direnv all-the-icons cider clojure-mode-extra-font-locking diff-hl doom-modeline elpy exec-path-from-shell flycheck go-mode groovy-mode lsp-mode lsp-ui magit marginalia markdown-mode orderless org paredit projectile py-autopep8 rainbow-delimiters tagedit use-package vertico yasnippet))
  '(python-shell-interpreter
    "/Users/adonisbovell/Local/workspace/.envs/emacs-python-3/bin/python")
  '(safe-local-variable-values '((my-black-fix-code-on-save . t) (my-black-fix-code . t))))

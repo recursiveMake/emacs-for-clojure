@@ -21,23 +21,34 @@
   :init
   (recentf-mode 1))
 
-;; ido-mode allows you to more easily navigate choices. For example,
-;; when you want to switch buffers, ido presents you with a list
-;; of buffers in the the mini-buffer. As you start to type a buffer's
-;; name, ido will narrow down the list of buffers to match the text
-;; you've typed in
-;; http://www.emacswiki.org/emacs/InteractivelyDoThings
-(use-package ido
-  :config
-  (setq ido-enable-flex-matching t
-        ido-use-filename-at-point nil
-        ido-auto-merge-work-directories-length -1
-        ido-use-virtual-buffers t)
+;; Vertico: modern vertical minibuffer completion UI
+(use-package vertico
+  :ensure t
   :init
-  (ido-mode t)
-  (ido-everywhere 1))
+  (vertico-mode 1))
 
-;; Enhances M-x with ranked command history (modern smex replacement)
+;; Orderless: space-separated component matching (replaces ido flex matching)
+;; e.g. "ff clj" matches "find-file-clojure"
+(use-package orderless
+  :ensure t
+  :config
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
+
+;; Marginalia: adds annotations to completion candidates
+;; (keybindings, docstrings, file sizes, etc.)
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode 1))
+
+;; Consult: enhanced navigation commands built on completing-read
+(use-package consult
+  :ensure t
+  :bind (("C-x b" . consult-buffer)))
+
+;; Enhances M-x with ranked command history (works with vertico)
 (use-package amx
   :ensure t
   :init
