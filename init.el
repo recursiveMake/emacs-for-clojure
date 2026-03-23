@@ -36,15 +36,6 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
-    ;; allow ido usage in as many contexts as possible
-    ido-completing-read+
-    crm-custom
-
-    ;; Enhances M-x to allow easier execution of commands. Provides
-    ;; a filterable list of possible commands in the minibuffer
-    ;; http://www.emacswiki.org/emacs/Smex
-    smex
-
     ;; project navigation
     ag
     direnv
@@ -67,8 +58,6 @@
     ;; go
     go-mode
     exec-path-from-shell
-    auto-complete
-    go-autocomplete
 
     ;; groovy
     groovy-mode
