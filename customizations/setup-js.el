@@ -1,9 +1,15 @@
 ;; javascript / html
-(add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
-(add-hook 'js-mode-hook 'subword-mode)
-(add-hook 'html-mode-hook 'subword-mode)
-(setq js-indent-level 2)
-(with-eval-after-load "sgml-mode"
-  (require 'tagedit)
-  (tagedit-add-paredit-like-keybindings)
-  (add-hook 'html-mode-hook (lambda () (tagedit-mode 1))))
+(use-package js
+  :mode ("\\.js$" . js-mode)
+  :hook (js-mode . subword-mode)
+  :config
+  (setq js-indent-level 2))
+
+(use-package sgml-mode
+  :hook (html-mode . subword-mode))
+
+(use-package tagedit
+  :ensure t
+  :hook (html-mode . tagedit-mode)
+  :config
+  (tagedit-add-paredit-like-keybindings))
