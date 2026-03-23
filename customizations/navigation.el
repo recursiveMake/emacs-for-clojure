@@ -78,9 +78,6 @@
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 
-;; projectile everywhere!
-(projectile-global-mode)
-
 ;; projectile bindings
 (require 'projectile)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
