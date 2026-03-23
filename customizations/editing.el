@@ -31,10 +31,11 @@
 ;; When you visit a file, point goes to the last place where it
 ;; was when you previously visited the same file.
 ;; http://www.emacswiki.org/emacs/SavePlace
-(require 'saveplace)
-(setq-default save-place t)
-;; keep track of saved places in ~/.emacs.d/places
-(setq save-place-file (concat user-emacs-directory "places"))
+(use-package saveplace
+  :config
+  (setq save-place-file (concat user-emacs-directory "places"))
+  :init
+  (save-place-mode 1))
 
 ;; Emacs can automatically create backup files. This tells Emacs to
 ;; put all backups in ~/.emacs.d/backups. More info:
@@ -43,7 +44,6 @@
                                                "backups"))))
 (setq auto-save-default nil)
 
-
 ;; comments
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"
@@ -51,9 +51,9 @@
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
+(use-package rainbow-delimiters
+  :ensure t
+  :hook (prog-mode . rainbow-delimiters-mode))
 
 ;; use 2 spaces for tabs
 (defun die-tabs ()
@@ -72,7 +72,6 @@
 
 (setq electric-indent-mode nil)
 
-
 ;; hide show!
 (add-hook 'prog-mode-hook
           (lambda ()
@@ -82,13 +81,18 @@
             (local-set-key (kbd "C-c <down>") 'hs-show-all)
             (hs-minor-mode t)))
 
-; Newlines
 (setq require-final-newline t)
 
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+(use-package lsp-ui
+  :ensure t
+  :hook (lsp-mode . lsp-ui-mode))
 
-;; snippets
-(yas-global-mode 1)
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode 1))
 
-;; direnv
-(direnv-mode)
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))
