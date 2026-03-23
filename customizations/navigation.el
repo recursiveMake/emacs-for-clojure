@@ -37,6 +37,12 @@
   (ido-mode t)
   (ido-everywhere 1))
 
+;; Enhances M-x with ranked command history (modern smex replacement)
+(use-package amx
+  :ensure t
+  :init
+  (amx-mode 1))
+
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 

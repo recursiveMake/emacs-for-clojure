@@ -36,6 +36,9 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
+    ;; Enhances M-x with ranked command history
+    amx
+
     ;; project navigation
     ag
     direnv
