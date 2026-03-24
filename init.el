@@ -9,6 +9,12 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+;; Prefer MELPA over GNU ELPA to ensure we get current package versions
+(setq package-archive-priorities
+      '(("melpa" . 20)
+        ("melpa-stable" . 10)
+        ("gnu" . 5)))
+
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
