@@ -53,7 +53,7 @@
 
     ;; project navigation
     ag
-    direnv
+    envrc
     projectile
 
     ;; colorful parenthesis matching
