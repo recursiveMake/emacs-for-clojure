@@ -74,6 +74,11 @@
     go-mode
     exec-path-from-shell
 
+    ;; misc languages
+    nix-mode
+    dockerfile-mode
+    yaml-mode
+
     ;; groovy
     groovy-mode
 
@@ -161,6 +166,9 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-python.el")
+
+;; Misc language modes
+(load "setup-misc-languages.el")
 
 ;; Git configuration
 (load "git.el")
