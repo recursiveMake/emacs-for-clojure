@@ -72,7 +72,6 @@
 
     ;; go
     go-mode
-    exec-path-from-shell
 
     ;; misc languages
     nix-mode
@@ -99,8 +98,6 @@
     lsp-ui
     yasnippet
 
-    ;; Salt
-    ;; salt-mode
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user

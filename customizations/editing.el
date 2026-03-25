@@ -70,7 +70,7 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
-(setq electric-indent-mode nil)
+(electric-indent-mode -1)
 
 ;; hide show!
 (add-hook 'prog-mode-hook
@@ -80,8 +80,6 @@
             (local-set-key (kbd "C-c <up>") 'hs-hide-all)
             (local-set-key (kbd "C-c <down>") 'hs-show-all)
             (hs-minor-mode t)))
-
-(setq require-final-newline t)
 
 (use-package lsp-ui
   :ensure t

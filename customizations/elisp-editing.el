@@ -5,10 +5,9 @@
          (ielm-mode . enable-paredit-mode)
          (lisp-mode . enable-paredit-mode)
          (lisp-interaction-mode . enable-paredit-mode)
-         (scheme-mode . enable-paredit-mode)
-         (clojure-mode . enable-paredit-mode)))
+         (scheme-mode . enable-paredit-mode)))
 
 (use-package eldoc
-  :hook ((emacs-lisp-mode . turn-on-eldoc-mode)
-         (lisp-interaction-mode . turn-on-eldoc-mode)
-         (ielm-mode . turn-on-eldoc-mode)))
+  :hook ((emacs-lisp-mode . eldoc-mode)
+         (lisp-interaction-mode . eldoc-mode)
+         (ielm-mode . eldoc-mode)))
