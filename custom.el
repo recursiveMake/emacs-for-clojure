@@ -5,12 +5,12 @@
  ;; If there is more than one, they won't work right.
  '(elpy-modules
    '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-django elpy-module-sane-defaults))
- '(elpy-rpc-python-command "python3")
+ '(elpy-rpc-python-command
+   "/Users/adonisbovell/Local/workspace/.envs/emacs-python-3/bin/python")
  '(lsp-auto-guess-root t)
  '(package-selected-packages
    '(ag amx consult envrc all-the-icons cider clojure-mode-extra-font-locking diff-hl dockerfile-mode doom-modeline elpy exec-path-from-shell flycheck go-mode groovy-mode lsp-mode lsp-ui magit marginalia markdown-mode nix-mode orderless org paredit projectile py-autopep8 rainbow-delimiters tagedit use-package vertico yaml-mode yasnippet))
- '(python-shell-interpreter
-   "/Users/adonisbovell/Local/workspace/.envs/emacs-python-3/bin/python")
+ '(python-shell-interpreter "python3")
  '(safe-local-variable-values '((my-black-fix-code-on-save . t) (my-black-fix-code . t))))
 
 (custom-set-faces
