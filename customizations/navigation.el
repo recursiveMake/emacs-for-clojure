@@ -48,11 +48,29 @@
   :ensure t
   :bind (("C-x b" . consult-buffer)))
 
-;; Enhances M-x with ranked command history (works with vertico)
-(use-package amx
+;; Prescient: sorts candidates by recency and frequency across all completion
+(use-package prescient
   :ensure t
+  :config
+  (prescient-persist-mode 1))
+
+(use-package vertico-prescient
+  :ensure t
+  :after (vertico prescient)
+  :config
+  (vertico-prescient-mode 1))
+
+;; Embark: context-aware actions on minibuffer candidates (C-. to act)
+(use-package embark
+  :ensure t
+  :bind (("C-." . embark-act)
+         ("C-h B" . embark-bindings))
   :init
-  (amx-mode 1))
+  (setq prefix-help-command #'embark-prefix-help-command))
+
+(use-package embark-consult
+  :ensure t
+  :hook (embark-collect-mode . consult-preview-at-point-mode))
 
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)

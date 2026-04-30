@@ -42,14 +42,15 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
-    ;; Enhances M-x with ranked command history
-    amx
-
     ;; modern minibuffer completion
     vertico
     orderless
     marginalia
     consult
+    prescient
+    vertico-prescient
+    embark
+    embark-consult
 
     ;; project navigation
     ag
