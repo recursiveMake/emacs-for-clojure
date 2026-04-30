@@ -89,15 +89,20 @@
     all-the-icons
     doom-modeline
 
-    ;; pep
-    elpy
+    ;; Python
+    lsp-pyright
     py-autopep8
     flycheck
+    python-pytest
 
     ;; lsp-mode
     lsp-mode
     lsp-ui
     yasnippet
+
+    ;; in-buffer completion
+    corfu
+    cape
 
     ))
 

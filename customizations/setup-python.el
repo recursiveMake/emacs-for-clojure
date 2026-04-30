@@ -1,27 +1,21 @@
-(use-package elpy
+(use-package lsp-pyright
   :ensure t
-  :init
-  (elpy-enable)
-  :config
-  (progn
-    (define-key elpy-mode-map (kbd "<M-right>") nil)
-    (define-key elpy-mode-map (kbd "<M-left>") nil)
-    (define-key elpy-mode-map (kbd "<S-right>") 'elpy-nav-indent-shift-right)
-    (define-key elpy-mode-map (kbd "<S-left>") 'elpy-nav-indent-shift-left)))
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-pyright)
+                         (lsp-deferred))))
 
 (use-package flycheck
   :ensure t
   :init
   (global-flycheck-mode t))
 
-(defvar my-black-fix-code-on-save nil
-  "If true, code will be blackened on save")
+(use-package py-autopep8
+  :ensure t)
 
-(defun my-black-fix-code ()
-  (when my-black-fix-code-on-save
-      (elpy-black-fix-code)))
-
-(add-hook 'before-save-hook 'my-black-fix-code)
+(use-package python-pytest
+  :ensure t
+  :bind (:map python-mode-map
+              ("C-c t" . python-pytest-dispatch)))
 
 (add-hook 'python-mode-hook (lambda ()
                               (flymake-mode -1)))

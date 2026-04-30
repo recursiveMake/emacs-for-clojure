@@ -90,6 +90,36 @@
   :config
   (yas-global-mode 1))
 
+;; Corfu: in-buffer popup completion (replaces company)
+(use-package corfu
+  :ensure t
+  :custom
+  (corfu-auto t)
+  (corfu-auto-delay 0.2)
+  (corfu-auto-prefix 2)
+  (corfu-quit-no-match 'separator)
+  :init
+  (global-corfu-mode))
+
+;; Cape: completion-at-point backends for corfu
+(use-package cape
+  :ensure t
+  :init
+  (add-hook 'completion-at-point-functions #'cape-dabbrev)
+  (add-hook 'completion-at-point-functions #'cape-file)
+  (add-hook 'completion-at-point-functions #'cape-keyword))
+
+;; corfu-prescient: apply prescient sorting to corfu candidates
+(use-package corfu-prescient
+  :ensure nil
+  :after (corfu prescient)
+  :config
+  (corfu-prescient-mode 1))
+
+;; Tell lsp-mode to expose completions via capf so corfu picks them up
+(with-eval-after-load 'lsp-mode
+  (setq lsp-completion-provider :none))
+
 (use-package envrc
   :ensure t
   :hook (after-init . envrc-global-mode))
