@@ -1,6 +1,6 @@
 ;; Sets up exec-path-from shell
 ;; https://github.com/purcell/exec-path-from-shell
-(when (memq window-system '(mac ns))
+(when (eq system-type 'darwin)
   (exec-path-from-shell-initialize))
 
 (when (string= system-type "darwin")       
