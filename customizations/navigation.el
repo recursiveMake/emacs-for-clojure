@@ -52,6 +52,7 @@
 (use-package prescient
   :ensure t
   :config
+  (setq prescient-filter-method '(literal regexp initialism fuzzy))
   (prescient-persist-mode 1))
 
 (use-package vertico-prescient
