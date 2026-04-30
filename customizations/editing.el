@@ -109,6 +109,13 @@
   (add-hook 'completion-at-point-functions #'cape-file)
   (add-hook 'completion-at-point-functions #'cape-keyword))
 
+;; corfu-prescient: apply prescient sorting to corfu candidates
+(use-package corfu-prescient
+  :ensure t
+  :after (corfu prescient)
+  :config
+  (corfu-prescient-mode 1))
+
 ;; Tell lsp-mode to expose completions via capf so corfu picks them up
 (with-eval-after-load 'lsp-mode
   (setq lsp-completion-provider :none))

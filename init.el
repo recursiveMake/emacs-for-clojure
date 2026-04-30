@@ -102,6 +102,7 @@
 
     ;; in-buffer completion
     corfu
+    corfu-prescient
     cape
 
     ))
